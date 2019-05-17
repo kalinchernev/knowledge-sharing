@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:10-alpine
+    steps:
+      - checkout
+     - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install
+          command: yarn install
+      - run:
+          name: Test
+          command: yarn test
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules

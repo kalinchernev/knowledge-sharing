@@ -1,9 +1,6 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
+  "extends": ["react-app", "prettier", "prettier/react"],
   "plugins": ["prettier"],
-  "rules": {
-    "no-underscore-dangle": 0
-  },
   "globals": {
     "window": true,
     "document": true,

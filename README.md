@@ -1,5 +1,7 @@
 # Knowledge Sharing
 
+[![CircleCI](https://circleci.com/gh/kalinchernev/knowledge-sharing.svg?style=svg)](https://circleci.com/gh/kalinchernev/knowledge-sharing)
+
 ## Prerequisites
 
 - AWS account

@@ -6,9 +6,14 @@
 
 - AWS account
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) to setup profile and credentials
-- NodeJS (8 or higher)
-- Amplify CLI
+- NodeJS (8, 10 or higher, LTS is best, obviously)
 
 ## Getting started
 
 Please refer to Amplify's official [guide](https://aws-amplify.github.io/docs/).
+
+Although official documentation recommends that `@aws-amplify/cli` is installed globally, in this project it's included in development dependencies. With this, you can easily use the CLI in the following way:
+
+```sh
+$ npx amplify help
+```

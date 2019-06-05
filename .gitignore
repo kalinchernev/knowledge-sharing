@@ -31,5 +31,5 @@ node_modules/
 aws-exports.js
 awsconfiguration.json
 
-#best practices
-amplify/team-provider-info.json
+# Uncomment in case you want to reuse AWS resources between multiple team members.
+# amplify/team-provider-info.json

@@ -1,0 +1,14 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "knowledge-sharing-20190310174112-authRole",
+      "UnauthRoleArn": "arn:aws:iam::964704953665:role/knowledge-sharing-20190310174112-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::964704953665:role/knowledge-sharing-20190310174112-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "knowledge-sharing-20190310174112-deployment",
+      "UnauthRoleName": "knowledge-sharing-20190310174112-unauthRole",
+      "StackName": "knowledge-sharing-20190310174112",
+      "StackId": "arn:aws:cloudformation:eu-west-1:964704953665:stack/knowledge-sharing-20190310174112/ef0c9190-434a-11e9-9a6c-0637a63b4e60"
+    }
+  }
+}

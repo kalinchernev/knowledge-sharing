@@ -23,3 +23,7 @@ $ npx amplify help
 Amplify is an abstraction on top of AWS services and mistakes are costly. Make sure you read, know and understand how to share and collaborate with the tool correctly.
 
 Read more about [multiple environments and team workflows](https://aws-amplify.github.io/docs/cli/multienv?sdk=js)
+
+## Documentation for developers
+
+There is a separate file with [tips and tricks](./docs/development.md) for those who are interested in making modifications in the project.

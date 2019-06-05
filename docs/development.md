@@ -12,9 +12,9 @@ Example: `export AWS_DEFAULT_PROFILE=kalata`
 
 ## Swithing between computers
 
-As not everyone use a single laptop for work and after-work entertainment. Some use several machines and it's important to know how to work with the project in this repository in a consistent way throughout different workspaces.
+Not everyone usea a single laptop for work and after-work entertainment. Some use several machines during a day. So, it's important to know how to work with the project in this repository in a consistent way throughout different workspaces.
 
-Here's an overview of the workflow:
+Here's an overview of a workflow for reusing AWS resources throughout different workspaces:
 
 - Commit `amplify/team-provider-info.json` to source control from your primary working machine. This will allow for other users with enough permissions to use same existing resources.
 - Have access to the credentials of the same user from the primary machine or create another one which have sufficient permissions in AWS to manage the beforementioned resources.

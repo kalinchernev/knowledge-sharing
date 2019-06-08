@@ -36,19 +36,16 @@ class Share extends Component {
 
     const newPost = { url, notes, date };
 
-    API.graphql(graphqlOperation(createPost, { input: newPost })).then(
-      result => {
+    API.graphql(graphqlOperation(createPost, { input: newPost }))
+      .then(result => {
         console.log(
           'New post has been created successfully!',
           JSON.stringify(result, null, 2)
         );
-
-        this.setState({
-          url: '',
-          notes: '',
-        });
-      }
-    );
+      })
+      .catch(e => {
+        console.error('An error occured while trying to create a new post', e);
+      });
   };
 
   render() {

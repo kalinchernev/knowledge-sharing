@@ -1,0 +1,6 @@
+type Post @model {
+  id: ID!
+  date: String
+  url: String!
+  notes: String
+}

@@ -1,12 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import { API, graphqlOperation } from 'aws-amplify';
 
+import { listPosts } from '../graphql/queries';
+
 class List extends Component {
   state = { posts: [] };
 
   async componentDidMount() {
     try {
-      const data = await API.graphql(listPostsOperation);
+      const data = await API.graphql(graphqlOperation(listPosts));
       if (
         data &&
         data.data &&
@@ -39,18 +41,5 @@ class List extends Component {
     );
   }
 }
-
-const listPostsOperation = graphqlOperation(`
-  query {
-    listPosts {
-      items {
-        id
-        url
-        notes
-        date
-      }
-    }
-  }
-`);
 
 export default List;

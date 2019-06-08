@@ -10,7 +10,6 @@ export const getPost = `query GetPost($id: ID!) {
   }
 }
 `;
-
 export const listPosts = `query ListPosts(
   $filter: ModelPostFilterInput
   $limit: Int

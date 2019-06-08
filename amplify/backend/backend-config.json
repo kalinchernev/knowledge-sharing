@@ -11,8 +11,14 @@
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
-        "securityType": "API_KEY"
+        "securityType": "AMAZON_COGNITO_USER_POOLS"
       }
+    }
+  },
+  "auth": {
+    "knowledgesharing85c6ba1b": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation"
     }
   }
 }

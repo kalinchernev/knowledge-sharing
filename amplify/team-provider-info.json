@@ -9,6 +9,13 @@
       "UnauthRoleName": "knowledge-sharing-20190310174112-unauthRole",
       "StackName": "knowledge-sharing-20190310174112",
       "StackId": "arn:aws:cloudformation:eu-west-1:964704953665:stack/knowledge-sharing-20190310174112/ef0c9190-434a-11e9-9a6c-0637a63b4e60"
+    },
+    "categories": {
+      "auth": {
+        "knowledgesharing85c6ba1b": {
+          "hostedUIProviderCreds": "[]"
+        }
+      }
     }
   }
 }

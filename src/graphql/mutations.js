@@ -10,7 +10,6 @@ export const createPost = `mutation CreatePost($input: CreatePostInput!) {
   }
 }
 `;
-
 export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
   updatePost(input: $input) {
     id
@@ -20,7 +19,6 @@ export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
   }
 }
 `;
-
 export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
   deletePost(input: $input) {
     id

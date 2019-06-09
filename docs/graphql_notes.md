@@ -6,7 +6,7 @@ At the moment of documenting workflows with GraphQL in AWS Amplify, it's still a
 
 ## Schema
 
-The project's schema is currently stored in [`amplify/backend/api/knowledgeSharing/schema.graphql`](./amplify/backend/api/knowledgeSharing/schema.graphql)
+The project's schema is currently stored in [`amplify/backend/api/knowledgeSharing/schema.graphql`](https://github.com/kalinchernev/knowledge-sharing/blob/master/amplify/backend/api/knowledgeSharing/schema.graphql)
 
 The `@model` is a [GraphQL transform](https://aws-amplify.github.io/docs/cli/graphql?sdk=js) coming from AWS Amplify.
 
@@ -16,7 +16,7 @@ Quick testing can be done through the [AWS AppSync Web Console](https://eu-west-
 
 AWS Amplify's documentation demonstrate usage of 2 clients: [Amplify GraphQL Client](https://aws-amplify.github.io/docs/js/api#amplify-graphql-client) and [AWS AppSync SDK](https://aws-amplify.github.io/docs/js/api#aws-appsync-sdk). Implementations in this code base are with using the Amplify GraphQL Client.
 
-With the help of AWS Amplify CLI, there are auto-generated set of queries and mutations at [`src/graphql`](./src/graphql). This facilitates implementations such as:
+With the help of AWS Amplify CLI, there are auto-generated set of queries and mutations at [`src/graphql`](https://github.com/kalinchernev/knowledge-sharing/tree/master/src/graphql). This facilitates implementations such as:
 
 ```js
 import { API, graphqlOperation } from 'aws-amplify';

@@ -2,6 +2,8 @@
 
 [![CircleCI](https://circleci.com/gh/kalinchernev/knowledge-sharing.svg?style=svg)](https://circleci.com/gh/kalinchernev/knowledge-sharing)
 
+Because sharing is caring!
+
 ## Prerequisites
 
 - AWS account

@@ -10,15 +10,23 @@ class Share extends Component {
     disabled: true,
     feedback: '',
     notes: '',
-    tags: [],
+    tags: '',
     url: '',
-    user: {},
+    author: '',
   };
 
   async componentDidMount() {
     try {
-      const user = await Auth.currentAuthenticatedUser();
-      this.setState({ user });
+      // If federated with cognito: userData.attributes.name
+      // If directly from user pool: data.name
+      const userData = await Auth.currentAuthenticatedUser();
+
+      const author =
+        userData && userData.attributes && userData.attributes.name
+          ? userData.attributes.name
+          : userData.name;
+
+      this.setState({ author });
     } catch (error) {
       const feedback =
         'There was an issue while fetching information about current user';
@@ -48,27 +56,27 @@ class Share extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const { url, notes, tags, user } = this.state;
-    const author = user.name;
+    const { url, notes, tags, author } = this.state;
     const date = new Date().toISOString();
     const tagsList = tags
-      .split(',')
-      .map(tag => tag.trim())
-      .map(tag => tag.toLowerCase())
-      .filter(tag => tag);
+      ? tags
+          .split(',')
+          .map(tag => tag.trim())
+          .map(tag => tag.toLowerCase())
+          .filter(tag => tag)
+      : [];
 
     const newPost = { author, url, notes, date, tags: tagsList };
 
     API.graphql(graphqlOperation(createPost, { input: newPost }))
       .then(result => {
         const feedback = 'New post has been created successfully!';
-
         this.setState({ feedback });
-        console.log(feedback, JSON.stringify(result, null, 2));
+        console.log(JSON.stringify(result));
       })
       .catch(e => {
-        const feedback = 'New post has been created successfully!';
-        this.setState({ feedback });
+        const feedback = 'Error while trying to create a new shared post!';
+        this.setState({ feedback: `${feedback}\n${JSON.stringify(e)}` });
         console.error(feedback, e);
       });
   };

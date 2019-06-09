@@ -4,7 +4,7 @@ import { API, graphqlOperation } from 'aws-amplify';
 import { listPosts } from '../graphql/queries';
 
 class List extends Component {
-  state = { posts: [] };
+  state = { posts: [], feedback: '' };
 
   async componentDidMount() {
     try {
@@ -15,27 +15,37 @@ class List extends Component {
         data.data.listPosts &&
         data.data.listPosts.items
       ) {
-        this.setState({ posts: data.data.listPosts.items });
+        this.setState({
+          posts: data.data.listPosts.items,
+          feedback: data.data.listPosts.items.length
+            ? 'See below'
+            : 'Be the first to share!',
+        });
       }
     } catch (error) {
-      console.error(`Failed to get list of existing posts`, error);
+      const feedback =
+        'Failed to get list of existing posts. Check the console for more details.';
+
+      console.error(feedback, error);
+      this.setState({ feedback });
     }
   }
 
   render() {
-    const { posts } = this.state;
+    const { posts, feedback } = this.state;
 
     return (
       <Fragment>
-        <p>List</p>
+        <h2>Latest posts</h2>
+        {feedback ? <p>{feedback}</p> : ''}
         {posts.length ? (
           <ul>
             {posts.map(post => (
-              <li key={post.id}>{post.url}</li>
+              <li key={post.id}>{JSON.stringify(post)}</li>
             ))}
           </ul>
         ) : (
-          'No posts'
+          ''
         )}
       </Fragment>
     );

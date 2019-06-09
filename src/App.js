@@ -33,4 +33,26 @@ const App = () => (
   </HashRouter>
 );
 
-export default withAuthenticator(App, true);
+// @see https://www.cannyengineer.com/blog/google-authentication-aws-amplify-deployment
+// @see https://github.com/aws-amplify/amplify-js/blob/master/packages/aws-amplify-react/src/Auth/index.jsx#L39
+export default withAuthenticator(
+  App,
+  {
+    includeGreetings: true,
+    federated: {
+      google_client_id:
+        '428178298267-ev7ohvqvbkrlutluk2ubn77njk29b5bl.apps.googleusercontent.com',
+    },
+    signUpConfig: {
+      signUpFields: [
+        {
+          label: 'Name',
+          key: 'name',
+          required: true,
+          type: 'string',
+        },
+      ],
+    },
+  },
+  []
+);

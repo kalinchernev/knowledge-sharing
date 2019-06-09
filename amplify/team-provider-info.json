@@ -12,8 +12,8 @@
     },
     "categories": {
       "auth": {
-        "knowledgesharing85c6ba1b": {
-          "hostedUIProviderCreds": "[]"
+        "googleauth": {
+          "googleClientId": "428178298267-ev7ohvqvbkrlutluk2ubn77njk29b5bl.apps.googleusercontent.com"
         }
       }
     }

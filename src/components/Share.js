@@ -7,9 +7,10 @@ import { createPost } from '../graphql/mutations';
 
 class Share extends Component {
   state = {
-    url: '',
-    notes: '',
     disabled: true,
+    notes: '',
+    tags: [],
+    url: '',
   };
 
   handleChange = e => {
@@ -31,10 +32,16 @@ class Share extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { url, notes } = this.state;
-    const date = new Date().toISOString();
 
-    const newPost = { url, notes, date };
+    const { url, notes, tags } = this.state;
+    const date = new Date().toISOString();
+    const tagsList = tags
+      .split(',')
+      .map(tag => tag.trim())
+      .map(tag => tag.toLowerCase())
+      .filter(tag => tag);
+
+    const newPost = { url, notes, date, tags: tagsList };
 
     API.graphql(graphqlOperation(createPost, { input: newPost }))
       .then(result => {
@@ -62,6 +69,16 @@ class Share extends Component {
               name="url"
               type="text"
               id="url"
+            />
+          </label>
+          <br />
+          <label htmlFor="tags">
+            Tags, comma separated
+            <input
+              onChange={this.handleChange}
+              name="tags"
+              type="text"
+              id="tags"
             />
           </label>
           <br />

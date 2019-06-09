@@ -16,7 +16,7 @@
     }
   },
   "auth": {
-    "knowledgesharing85c6ba1b": {
+    "googleauth": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation"
     }

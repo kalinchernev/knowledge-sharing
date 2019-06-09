@@ -6,6 +6,7 @@ export const onCreatePost = `subscription OnCreatePost {
     id
     date
     url
+    tags
     notes
   }
 }
@@ -15,6 +16,7 @@ export const onUpdatePost = `subscription OnUpdatePost {
     id
     date
     url
+    tags
     notes
   }
 }
@@ -24,6 +26,7 @@ export const onDeletePost = `subscription OnDeletePost {
     id
     date
     url
+    tags
     notes
   }
 }

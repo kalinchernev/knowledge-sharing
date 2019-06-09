@@ -6,6 +6,7 @@ export const createPost = `mutation CreatePost($input: CreatePostInput!) {
     id
     date
     url
+    tags
     notes
   }
 }
@@ -15,6 +16,7 @@ export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
     id
     date
     url
+    tags
     notes
   }
 }
@@ -24,6 +26,7 @@ export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
     id
     date
     url
+    tags
     notes
   }
 }

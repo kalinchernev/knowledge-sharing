@@ -6,6 +6,7 @@ export const getPost = `query GetPost($id: ID!) {
     id
     date
     url
+    tags
     notes
   }
 }
@@ -20,6 +21,7 @@ export const listPosts = `query ListPosts(
       id
       date
       url
+      tags
       notes
     }
     nextToken

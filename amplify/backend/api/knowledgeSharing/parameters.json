@@ -1,7 +1,4 @@
 {
   "AppSyncApiName": "knowledgeSharing",
-  "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "AuthCognitoUserPoolId": {
-    "Fn::GetAtt": ["authgoogleauth", "Outputs.UserPoolId"]
-  }
+  "DynamoDBBillingMode": "PAY_PER_REQUEST"
 }

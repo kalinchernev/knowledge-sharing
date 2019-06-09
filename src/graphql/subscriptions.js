@@ -8,6 +8,7 @@ export const onCreatePost = `subscription OnCreatePost {
     url
     tags
     notes
+    author
   }
 }
 `;
@@ -18,6 +19,7 @@ export const onUpdatePost = `subscription OnUpdatePost {
     url
     tags
     notes
+    author
   }
 }
 `;
@@ -28,6 +30,7 @@ export const onDeletePost = `subscription OnDeletePost {
     url
     tags
     notes
+    author
   }
 }
 `;

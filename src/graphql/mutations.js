@@ -8,6 +8,7 @@ export const createPost = `mutation CreatePost($input: CreatePostInput!) {
     url
     tags
     notes
+    author
   }
 }
 `;
@@ -18,6 +19,7 @@ export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
     url
     tags
     notes
+    author
   }
 }
 `;
@@ -28,6 +30,7 @@ export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
     url
     tags
     notes
+    author
   }
 }
 `;

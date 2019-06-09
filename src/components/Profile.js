@@ -19,8 +19,6 @@ class Profile extends Component {
   render() {
     const { user, isLoading } = this.state;
 
-    console.log(user);
-
     return (
       <Fragment>
         <p>User profile</p>

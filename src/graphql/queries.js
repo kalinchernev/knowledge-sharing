@@ -8,6 +8,7 @@ export const getPost = `query GetPost($id: ID!) {
     url
     tags
     notes
+    author
   }
 }
 `;
@@ -23,6 +24,7 @@ export const listPosts = `query ListPosts(
       url
       tags
       notes
+      author
     }
     nextToken
   }

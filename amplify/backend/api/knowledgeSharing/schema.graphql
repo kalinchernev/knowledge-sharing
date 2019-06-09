@@ -4,4 +4,5 @@ type Post @model {
   url: String!
   tags: [String]
   notes: String!
+  author: String!
 }

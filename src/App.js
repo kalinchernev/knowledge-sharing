@@ -39,10 +39,6 @@ export default withAuthenticator(
   App,
   {
     includeGreetings: true,
-    federated: {
-      google_client_id:
-        '428178298267-ev7ohvqvbkrlutluk2ubn77njk29b5bl.apps.googleusercontent.com',
-    },
     signUpConfig: {
       signUpFields: [
         {
@@ -50,6 +46,7 @@ export default withAuthenticator(
           key: 'name',
           required: true,
           type: 'string',
+          displayOrder: 0,
         },
       ],
     },

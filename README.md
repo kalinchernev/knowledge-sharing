@@ -29,3 +29,11 @@ Read more about [multiple environments and team workflows](https://aws-amplify.g
 ## Documentation for developers
 
 There is a separate file with [tips and tricks](./docs/development.md) for those who are interested in making modifications in the project.
+
+## Tricky parts
+
+AWS Amplify is a relatively new framework ([`"created_at": "2017-10-02T22:17:14Z"`](https://api.github.com/repos/aws-amplify/amplify-js)) and there are rough edges.
+
+Known compromises, workarounds, constraints and other similar:
+
+- Only default cognito user pool security mechanism used, no federated authentication with Google, Facebook or similar because AppSync's GraphQL APIs can have only 1 authorization type. (11/06/2019) Related: issue [#1252](https://github.com/aws-amplify/amplify-js/issues/1252), [blog post](https://aws.amazon.com/blogs/mobile/using-multiple-authorization-types-with-aws-appsync-graphql-apis/), [documentation](https://aws-amplify.github.io/docs/cli/graphql#auth)
